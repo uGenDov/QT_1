@@ -20,7 +20,8 @@ ListWidgetAddItem::ListWidgetAddItem(QWidget *parent) : QWidget(parent) {
     this->vLayout->addItem(this->vSpacer);
     this->vLayout->addWidget(this->buttonClearAll);
 
-    this->gridLayout->addWidget(this->listWidget, 0, 0);
+    this->gridLayout->addWidget(this->listWidget);
+
     this->gridLayout->addLayout(this->vLayout, 0, 1);
 
     QObject::connect(this->buttonAddNew, &QPushButton::clicked, this, [&]() {

@@ -6,8 +6,6 @@
 #include <QIcon>
 
 class Dialog : public QDialog {
-private:
-    Q_OBJECT
 public:
     explicit Dialog(QWidget *parent = nullptr);
 
