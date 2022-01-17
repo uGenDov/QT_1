@@ -8,14 +8,14 @@ Login::Login(QWidget *parent) : QWidget(parent) {
 
     this->line             = new QFrame(this);
 
-    this->buttonOK         = new QPushButton(QIcon("D:/images/QT_Login/Button_done.png"), QString("OK"), this);
-    this->buttonCancel     = new QPushButton(QIcon("D:/images/QT_Login/Button_close.png"), QString("Cancel"), this);
+    this->buttonOK         = new QPushButton(QIcon("../01_Example/01_Login/Button_done.png"), "OK", this);
+    this->buttonCancel     = new QPushButton(QIcon("../01_Example/01_Login/Button_close.png"), "Cancel", this);
 
-    this->lineEditName->setPlaceholderText(QString("Evgenii"));
-    this->lineEditPassword->setPlaceholderText(QString("15548404000"));
+    this->lineEditName->setPlaceholderText("Evgenii");
+    this->lineEditPassword->setPlaceholderText("15548404000");
 
-    this->lineEditName->setToolTip(QString("Input your name"));
-    this->lineEditPassword->setToolTip(QString("Input your password"));
+    this->lineEditName->setToolTip("Input your name");
+    this->lineEditPassword->setToolTip("Input your password");
     this->lineEditName->setToolTipDuration(2000);
     this->lineEditPassword->setToolTipDuration(2000);
 
@@ -53,7 +53,7 @@ Login::Login(QWidget *parent) : QWidget(parent) {
 
     Login::setFont(QFont("Arial", 9, -1, false));
     Login::setWindowTitle(QString("Login"));
-    Login::setWindowIcon(QIcon("D:/images/QT_Login/login.png"));
+    Login::setWindowIcon(QIcon("../01_Example/01_Login/login.png"));
     Login::setFixedSize(QWidget::sizeHint().width(), QWidget::sizeHint().height());
 }
 

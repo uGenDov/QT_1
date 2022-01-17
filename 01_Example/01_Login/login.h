@@ -1,4 +1,5 @@
 #include <QWidget>
+#include <QApplication>
 #include <QGridLayout>
 #include <QLabel>
 #include <QLineEdit>
