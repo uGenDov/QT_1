@@ -20,6 +20,9 @@ Login::Login(QWidget *parent) : QWidget(parent) {
     this->lineEditName->setToolTipDuration(2000);
     this->lineEditPassword->setToolTipDuration(2000);
 
+    this->lineEditName->setClearButtonEnabled(true);
+    this->lineEditPassword->setClearButtonEnabled(true);
+
     this->lineEditName->setValidator(new QRegExpValidator(QRegExp("[A-Za-z]{0,10}"), this));
 
     this->lineEditPassword->setEchoMode(QLineEdit::PasswordEchoOnEdit);
@@ -52,7 +55,7 @@ Login::Login(QWidget *parent) : QWidget(parent) {
     Login::setTabOrder(this->buttonOK, this->buttonCancel);
 
     Login::setFont(QFont("Arial", 9, -1, false));
-    Login::setWindowTitle(QString("Login"));
+    Login::setWindowTitle("Login");
     Login::setWindowIcon(QIcon("../01_Example/01_Login/login.png"));
     Login::setFixedSize(QWidget::sizeHint().width(), QWidget::sizeHint().height());
 }
