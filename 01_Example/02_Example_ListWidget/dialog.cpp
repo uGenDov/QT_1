@@ -8,6 +8,9 @@ Dialog::Dialog(QWidget *parent) : QDialog(parent) {
 
     this->buttonBox      = new QDialogButtonBox(this);
 
+    QRegExp regExp("[0-9]{0,4}");
+    this->lineEditNumber->setValidator(new QRegExpValidator(regExp, this));
+
     this->gridLayout->addWidget(new QLabel("Name:"), 0, 0);
     this->gridLayout->addWidget(new QLabel("Number:"), 1, 0);
     this->gridLayout->addWidget(this->lineEditName, 0, 1);

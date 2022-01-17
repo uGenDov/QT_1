@@ -5,6 +5,7 @@
 #include <QDialogButtonBox>
 #include <QIcon>
 #include <QMessageBox>
+#include <QRegExpValidator>
 
 class Dialog : public QDialog {
 public:

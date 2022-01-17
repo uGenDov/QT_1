@@ -14,7 +14,7 @@ find_package(Qt5 COMPONENTS
         Widgets
         REQUIRED)
 
-add_executable(QT_1 01_Example/02_Example_ListWidget/main.cpp 01_Example/02_Example_ListWidget/dialog.cpp 01_Example/02_Example_ListWidget/listwidgetadditem.cpp 01_Example/02_Example_ListWidget/dialog.h 01_Example/02_Example_ListWidget/listwidgetadditem.h)
+add_executable(QT_1 01_Example/02_Example_ListWidget/main.cpp 01_Example/02_Example_ListWidget/listwidgetadditem.cpp 01_Example/02_Example_ListWidget/dialog.cpp 01_Example/02_Example_ListWidget/listwidgetadditem.h 01_Example/02_Example_ListWidget/dialog.h)
 target_link_libraries(QT_1
         Qt5::Core
         Qt5::Gui
