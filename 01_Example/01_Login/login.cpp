@@ -2,14 +2,13 @@
 
 Login::Login(QWidget *parent) : QWidget(parent) {
     this->gridLayout       = new QGridLayout(this);
-
     this->lineEditName     = new QLineEdit(this);
     this->lineEditPassword = new QLineEdit(this);
-
     this->line             = new QFrame(this);
-
     this->buttonOK         = new QPushButton(QIcon("../01_Example/01_Login/Button_done.png"), "OK", this);
     this->buttonCancel     = new QPushButton(QIcon("../01_Example/01_Login/Button_close.png"), "Cancel", this);
+
+    //------------------------------------------------------------------------------------------------------------------
 
     this->lineEditName->setPlaceholderText("Evgenii");
     this->lineEditPassword->setPlaceholderText("15548404000");
@@ -37,6 +36,8 @@ Login::Login(QWidget *parent) : QWidget(parent) {
     this->gridLayout->addWidget(this->line, 2, 0, 1, 3);
     this->gridLayout->addWidget(this->buttonOK, 3, 1);
     this->gridLayout->addWidget(this->buttonCancel, 3, 2);
+
+    //------------------------------------------------------------------------------------------------------------------
 
     QObject::connect(this->buttonOK, &QPushButton::clicked, this, [&]() {
         if (this->lineEditName->text().isEmpty() || this->lineEditPassword->text().isEmpty()) {

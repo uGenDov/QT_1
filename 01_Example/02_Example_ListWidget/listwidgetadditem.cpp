@@ -4,13 +4,13 @@
 ListWidgetAddItem::ListWidgetAddItem(QWidget *parent) : QWidget(parent) {
     this->gridLayout     = new QGridLayout(this);
     this->vLayout        = new QVBoxLayout();
-
     this->listWidget     = new QListWidget(this);
-
     this->buttonAddNew   = new QPushButton("Add New Item", this);
     this->buttonEdit     = new QPushButton("Edit Item", this);
     this->buttonDelete   = new QPushButton("Delete Item", this);
     this->buttonClearAll = new QPushButton("Clear All", this);
+
+    //------------------------------------------------------------------------------------------------------------------
 
     this->vLayout->addWidget(this->buttonAddNew);
     this->vLayout->addWidget(this->buttonEdit);
@@ -21,6 +21,8 @@ ListWidgetAddItem::ListWidgetAddItem(QWidget *parent) : QWidget(parent) {
     this->gridLayout->addWidget(this->listWidget);
 
     this->gridLayout->addLayout(this->vLayout, 0, 1);
+
+    //------------------------------------------------------------------------------------------------------------------
 
     QObject::connect(this->buttonAddNew, &QPushButton::clicked, this, [&]() {
         Dialog dialog(this);

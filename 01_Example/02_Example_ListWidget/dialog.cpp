@@ -2,11 +2,11 @@
 
 Dialog::Dialog(QWidget *parent) : QDialog(parent) {
     this->gridLayout     = new QGridLayout(this);
-
     this->lineEditName   = new QLineEdit(this);
     this->lineEditNumber = new QLineEdit(this);
-
     this->buttonBox      = new QDialogButtonBox(this);
+
+    //------------------------------------------------------------------------------------------------------------------
 
     this->lineEditName->setClearButtonEnabled(true);
     this->lineEditNumber->setClearButtonEnabled(true);
@@ -21,6 +21,8 @@ Dialog::Dialog(QWidget *parent) : QDialog(parent) {
     this->gridLayout->addWidget(this->buttonBox, 2, 1);
 
     this->buttonBox->setStandardButtons(QDialogButtonBox::Cancel | QDialogButtonBox::Ok);
+
+    //------------------------------------------------------------------------------------------------------------------
 
     QObject::connect(this->buttonBox, &QDialogButtonBox::accepted, this, [&]() {
         if (this->lineEditName->text().isEmpty() && this->lineEditNumber->text().isEmpty()) {
