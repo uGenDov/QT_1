@@ -19,7 +19,6 @@ ListWidgetAddItem::ListWidgetAddItem(QWidget *parent) : QWidget(parent) {
     this->vLayout->addWidget(this->buttonClearAll);
 
     this->gridLayout->addWidget(this->listWidget);
-
     this->gridLayout->addLayout(this->vLayout, 0, 1);
 
     //------------------------------------------------------------------------------------------------------------------

@@ -23,7 +23,6 @@ Login::Login(QWidget *parent) : QWidget(parent) {
     this->lineEditPassword->setClearButtonEnabled(true);
 
     this->lineEditName->setValidator(new QRegExpValidator(QRegExp("[A-Za-z]{0,10}"), this));
-
     this->lineEditPassword->setEchoMode(QLineEdit::PasswordEchoOnEdit);
 
     this->line->setFrameShape(QFrame::HLine);
