@@ -16,12 +16,13 @@ Login::Login(QWidget *parent) : QWidget(parent) {
 
     this->lineEditName->setToolTip("Input your name");
     this->lineEditPassword->setToolTip("Input your password");
+
     this->lineEditName->setToolTipDuration(2000);
     this->lineEditPassword->setToolTipDuration(2000);
 
-    this->lineEditPassword->setEchoMode(QLineEdit::PasswordEchoOnEdit);
-
     this->lineEditName->setValidator(new QRegExpValidator(QRegExp("[A-Za-z]{0,10}"), this));
+
+    this->lineEditPassword->setEchoMode(QLineEdit::PasswordEchoOnEdit);
 
     this->line->setFrameShape(QFrame::HLine);
     this->line->setFrameShadow(QFrame::Sunken);

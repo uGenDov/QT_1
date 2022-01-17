@@ -23,16 +23,14 @@ Dialog::Dialog(QWidget *parent) : QDialog(parent) {
         if (this->lineEditName->text().isEmpty() && this->lineEditNumber->text().isEmpty()) {
             QMessageBox::warning(this, "Empty fields", "You didn't enter an item name and item number");
             return;
-        } else {
-            this->accept();
-        }
+        } else this->accept();
     });
 
     QObject::connect(this->buttonBox, &QDialogButtonBox::rejected, this, &Dialog::reject);
 
     Dialog::setFont(QFont("Arial", 9, -1, false));
     Dialog::setWindowIcon(QIcon("../01_Example/02_Example_ListWidget/add.png"));
-    Dialog::setWindowTitle(QString("Add New Item"));
+    Dialog::setWindowTitle("Add New Item");
     Dialog::setFixedHeight(QDialog::sizeHint().height());
     Dialog::setFixedWidth(400);
 }

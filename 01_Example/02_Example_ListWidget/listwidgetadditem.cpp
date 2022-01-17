@@ -7,10 +7,10 @@ ListWidgetAddItem::ListWidgetAddItem(QWidget *parent) : QWidget(parent) {
 
     this->listWidget     = new QListWidget(this);
 
-    this->buttonAddNew   = new QPushButton(QString("Add New Item"), this);
-    this->buttonEdit     = new QPushButton(QString("Edit Item"), this);
-    this->buttonDelete   = new QPushButton(QString("Delete Item"), this);
-    this->buttonClearAll = new QPushButton(QString("Clear All"), this);
+    this->buttonAddNew   = new QPushButton("Add New Item", this);
+    this->buttonEdit     = new QPushButton("Edit Item", this);
+    this->buttonDelete   = new QPushButton("Delete Item", this);
+    this->buttonClearAll = new QPushButton("Clear All", this);
 
     this->vLayout->addWidget(this->buttonAddNew);
     this->vLayout->addWidget(this->buttonEdit);
@@ -48,7 +48,7 @@ ListWidgetAddItem::ListWidgetAddItem(QWidget *parent) : QWidget(parent) {
     });
 
     ListWidgetAddItem::setFont(QFont("Arial", 9, -1, false));
-    ListWidgetAddItem::setWindowTitle(QString("ListWidget"));
+    ListWidgetAddItem::setWindowTitle("ListWidget");
     ListWidgetAddItem::setWindowIcon(QIcon("../01_Example/02_Example_ListWidget/list.png"));
 }
 
