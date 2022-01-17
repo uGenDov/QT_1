@@ -5,6 +5,7 @@
 #include <QPushButton>
 #include <QMessageBox>
 #include <QStyleFactory>
+#include <QRegExpValidator>
 
 class Login : public QWidget {
 public:
