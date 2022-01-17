@@ -49,7 +49,7 @@ ListWidgetAddItem::ListWidgetAddItem(QWidget *parent) : QWidget(parent) {
 
     ListWidgetAddItem::setFont(QFont("Arial", 9, -1, false));
     ListWidgetAddItem::setWindowTitle(QString("ListWidget"));
-    ListWidgetAddItem::setWindowIcon(QIcon("D:/images/QT_List/list.png"));
+    ListWidgetAddItem::setWindowIcon(QIcon("../01_Example/02_Example_ListWidget/list.png"));
 }
 
 ListWidgetAddItem::~ListWidgetAddItem() = default;

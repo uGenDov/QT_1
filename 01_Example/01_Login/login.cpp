@@ -21,8 +21,7 @@ Login::Login(QWidget *parent) : QWidget(parent) {
 
     this->lineEditPassword->setEchoMode(QLineEdit::PasswordEchoOnEdit);
 
-    QRegExp regExp("[A-Za-z]{0,10}");
-    this->lineEditName->setValidator(new QRegExpValidator(regExp, this));
+    this->lineEditName->setValidator(new QRegExpValidator(QRegExp("[A-Za-z]{0,10}"), this));
 
     this->line->setFrameShape(QFrame::HLine);
     this->line->setFrameShadow(QFrame::Sunken);
