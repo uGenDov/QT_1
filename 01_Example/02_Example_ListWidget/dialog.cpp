@@ -14,7 +14,6 @@ Dialog::Dialog(QWidget *parent) : QDialog(parent) {
     this->lineEditName->setValidator(new QRegExpValidator(regExpNameField, this));
     this->lineEditNumber->setValidator(new QRegExpValidator(regExpNumberField, this));
 
-
     this->gridLayout->addWidget(new QLabel("Name:"), 0, 0);
     this->gridLayout->addWidget(new QLabel("Number:"), 1, 0);
     this->gridLayout->addWidget(this->lineEditName, 0, 1);
