@@ -3,9 +3,6 @@
 Login::Login(QWidget *parent) : QWidget(parent) {
     this->gridLayout       = new QGridLayout(this);
 
-    this->labelName        = new QLabel(QString("Name:"), this);
-    this->labelPassword    = new QLabel(QString("Password:"), this);
-
     this->lineEditName     = new QLineEdit(this);
     this->lineEditPassword = new QLineEdit(this);
 
@@ -13,12 +10,6 @@ Login::Login(QWidget *parent) : QWidget(parent) {
 
     this->buttonOK         = new QPushButton(QIcon("D:/images/QT_Login/Button_done.png"), QString("OK"), this);
     this->buttonCancel     = new QPushButton(QIcon("D:/images/QT_Login/Button_close.png"), QString("Cancel"), this);
-
-    this->labelName->setBuddy(this->lineEditPassword);
-    this->labelPassword->setBuddy(this->lineEditPassword);
-
-    this->labelName->setAlignment(Qt::AlignVCenter);
-    this->labelPassword->setAlignment(Qt::AlignVCenter);
 
     this->lineEditName->setPlaceholderText(QString("Evgenii"));
     this->lineEditPassword->setPlaceholderText(QString("15548404000"));
@@ -33,8 +24,8 @@ Login::Login(QWidget *parent) : QWidget(parent) {
     this->line->setFrameShape(QFrame::HLine);
     this->line->setFrameShadow(QFrame::Sunken);
 
-    this->gridLayout->addWidget(this->labelName, 0, 0);
-    this->gridLayout->addWidget(this->labelPassword, 1, 0);
+    this->gridLayout->addWidget(new QLabel("Name:"), 0, 0);
+    this->gridLayout->addWidget(new QLabel("Password:"), 1, 0);
     this->gridLayout->addWidget(this->lineEditName, 0, 1, 1, 2);
     this->gridLayout->addWidget(this->lineEditPassword, 1, 1, 1, 2);
     this->gridLayout->addWidget(this->line, 2, 0, 1, 3);

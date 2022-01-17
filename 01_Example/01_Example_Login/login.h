@@ -14,8 +14,6 @@ public:
 
 private:
     QGridLayout *gridLayout;
-    QLabel      *labelPassword;
-    QLabel      *labelName;
     QLineEdit   *lineEditName;
     QLineEdit   *lineEditPassword;
     QFrame      *line;
