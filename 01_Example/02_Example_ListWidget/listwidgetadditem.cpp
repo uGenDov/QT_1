@@ -12,12 +12,10 @@ ListWidgetAddItem::ListWidgetAddItem(QWidget *parent) : QWidget(parent) {
     this->buttonDelete   = new QPushButton(QString("Delete Item"), this);
     this->buttonClearAll = new QPushButton(QString("Clear All"), this);
 
-    this->vSpacer        = new QSpacerItem(20, 80, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
     this->vLayout->addWidget(this->buttonAddNew);
     this->vLayout->addWidget(this->buttonEdit);
     this->vLayout->addWidget(this->buttonDelete);
-    this->vLayout->addItem(this->vSpacer);
+    this->vLayout->addItem(new QSpacerItem(20, 80, QSizePolicy::Minimum, QSizePolicy::Expanding));
     this->vLayout->addWidget(this->buttonClearAll);
 
     this->gridLayout->addWidget(this->listWidget);

@@ -17,5 +17,4 @@ private:
     QPushButton *buttonEdit;
     QPushButton *buttonDelete;
     QPushButton *buttonClearAll;
-    QSpacerItem *vSpacer;
 };

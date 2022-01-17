@@ -4,6 +4,7 @@
 #include <QLineEdit>
 #include <QDialogButtonBox>
 #include <QIcon>
+#include <QMessageBox>
 
 class Dialog : public QDialog {
 public:
@@ -20,8 +21,6 @@ public:
 
 private:
     QGridLayout      *gridLayout;
-    QLabel           *labelName;
-    QLabel           *labelNumber;
     QLineEdit        *lineEditName;
     QLineEdit        *lineEditNumber;
     QDialogButtonBox *buttonBox;
