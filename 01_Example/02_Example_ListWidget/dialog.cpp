@@ -14,6 +14,9 @@ Dialog::Dialog(QWidget *parent) : QDialog(parent) {
     this->lineEditName->setValidator(new QRegExpValidator(QRegExp("[A-Za-z]{0,10}"), this));
     this->lineEditNumber->setValidator(new QRegExpValidator(QRegExp("[0-9]{0,4}"), this));
 
+    this->lineEditName->unsetCursor();
+    this->lineEditNumber->unsetCursor();
+
     this->gridLayout->addWidget(new QLabel("Name:"), 0, 0);
     this->gridLayout->addWidget(new QLabel("Number:"), 1, 0);
     this->gridLayout->addWidget(this->lineEditName, 0, 1);
@@ -33,8 +36,11 @@ Dialog::Dialog(QWidget *parent) : QDialog(parent) {
 
     QObject::connect(this->buttonBox, &QDialogButtonBox::rejected, this, &Dialog::reject);
 
+    //------------------------------------------------------------------------------------------------------------------
+
     Dialog::setFont(QFont("Arial", 9, -1, false));
     Dialog::setWindowIcon(QIcon("../01_Example/02_Example_ListWidget/add.png"));
+    Dialog::setCursor(QCursor(QPixmap("../01_Example/02_Example_ListWidget/cursor_Grey.png")));
     Dialog::setWindowTitle("Add New Item");
     Dialog::setFixedHeight(QDialog::sizeHint().height());
     Dialog::setFixedWidth(400);

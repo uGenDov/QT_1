@@ -51,6 +51,7 @@ ListWidgetAddItem::ListWidgetAddItem(QWidget *parent) : QWidget(parent) {
     ListWidgetAddItem::setFont(QFont("Arial", 9, -1, false));
     ListWidgetAddItem::setWindowTitle("ListWidget");
     ListWidgetAddItem::setWindowIcon(QIcon("../01_Example/02_Example_ListWidget/list.png"));
+    ListWidgetAddItem::setCursor(QCursor(QPixmap("../01_Example/02_Example_ListWidget/cursor_Grey.png")));
 }
 
 ListWidgetAddItem::~ListWidgetAddItem() = default;

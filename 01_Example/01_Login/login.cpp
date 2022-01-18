@@ -25,6 +25,9 @@ Login::Login(QWidget *parent) : QWidget(parent) {
     this->lineEditName->setValidator(new QRegExpValidator(QRegExp("[A-Za-z]{0,10}"), this));
     this->lineEditPassword->setEchoMode(QLineEdit::PasswordEchoOnEdit);
 
+    this->lineEditName->unsetCursor();
+    this->lineEditPassword->unsetCursor();
+
     this->line->setFrameShape(QFrame::HLine);
     this->line->setFrameShadow(QFrame::Sunken);
 
@@ -50,13 +53,17 @@ Login::Login(QWidget *parent) : QWidget(parent) {
 
     QObject::connect(this->buttonCancel, &QPushButton::clicked, this, [&]() { Login::close(); });
 
+    //------------------------------------------------------------------------------------------------------------------
+
     Login::setTabOrder(this->lineEditName, this->lineEditPassword);
     Login::setTabOrder(this->lineEditPassword, this->buttonOK);
     Login::setTabOrder(this->buttonOK, this->buttonCancel);
 
     Login::setFont(QFont("Arial", 9, -1, false));
+    Login::setWindowOpacity(.9);
     Login::setWindowTitle("Login");
     Login::setWindowIcon(QIcon("../01_Example/01_Login/login.png"));
+    Login::setCursor(QCursor(QPixmap("../01_Example/01_Login/cursor_Grey.png")));
     Login::setFixedSize(QWidget::sizeHint().width(), QWidget::sizeHint().height());
 }
 
