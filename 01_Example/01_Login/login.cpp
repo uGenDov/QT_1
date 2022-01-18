@@ -31,6 +31,9 @@ Login::Login(QWidget *parent) : QWidget(parent) {
     this->line->setFrameShape(QFrame::HLine);
     this->line->setFrameShadow(QFrame::Sunken);
 
+    this->buttonOK->setStyleSheet("QPushButton:hover { color:rgb(255, 0, 0); }");
+    this->buttonCancel->setStyleSheet("QPushButton:hover { color:rgb(255, 0, 0); }");
+
     this->gridLayout->addWidget(new QLabel("Name:"), 0, 0);
     this->gridLayout->addWidget(new QLabel("Password:"), 1, 0);
     this->gridLayout->addWidget(this->lineEditName, 0, 1, 1, 2);
