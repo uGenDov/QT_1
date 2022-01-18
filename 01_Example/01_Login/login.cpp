@@ -63,8 +63,8 @@ Login::Login(QWidget *parent) : QWidget(parent) {
     Login::setWindowIcon(QIcon("../01_Example/01_Login/login.png"));
     Login::setCursor(QCursor(QPixmap("../01_Example/01_Login/cursor_Grey.png")));
     Login::setStyleSheet("QPushButton:hover { color:rgb(255, 0, 0); }");
+    QApplication::setFont(QFont("Arial", 9, -1, false));
     Login::setFixedSize(QWidget::sizeHint().width(), QWidget::sizeHint().height());
-
 }
 
 Login::~Login() = default;
