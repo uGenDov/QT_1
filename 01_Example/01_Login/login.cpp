@@ -31,8 +31,8 @@ Login::Login(QWidget *parent) : QWidget(parent) {
     this->line->setFrameShape(QFrame::HLine);
     this->line->setFrameShadow(QFrame::Sunken);
 
-    this->buttonOK->setStyleSheet("QPushButton:hover { color:rgb(255, 0, 0); }");
-    this->buttonCancel->setStyleSheet("QPushButton:hover { color:rgb(255, 0, 0); }");
+//    this->buttonOK->setStyleSheet;
+//    this->buttonCancel->setStyleSheet("QPushButton:hover { color:rgb(255, 0, 0); }");
 
     this->gridLayout->addWidget(new QLabel("Name:"), 0, 0);
     this->gridLayout->addWidget(new QLabel("Password:"), 1, 0);
@@ -62,12 +62,12 @@ Login::Login(QWidget *parent) : QWidget(parent) {
     Login::setTabOrder(this->lineEditPassword, this->buttonOK);
     Login::setTabOrder(this->buttonOK, this->buttonCancel);
 
-    Login::setFont(QFont("Arial", 9, -1, false));
-    Login::setWindowOpacity(.9);
     Login::setWindowTitle("Login");
     Login::setWindowIcon(QIcon("../01_Example/01_Login/login.png"));
     Login::setCursor(QCursor(QPixmap("../01_Example/01_Login/cursor_Grey.png")));
+    Login::setStyleSheet("QPushButton:hover { color:rgb(255, 0, 0); }");
     Login::setFixedSize(QWidget::sizeHint().width(), QWidget::sizeHint().height());
+
 }
 
 Login::~Login() = default;
